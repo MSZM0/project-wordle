@@ -10,19 +10,17 @@ const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
 console.info({ answer });
 
-
-
 function Game() {
   const [guesses, setGuesses] = React.useState([]);
 
-  function handleSumbmitGuess(guess){
-  console.log("new guess: ", guess)  
-  setGuesses([...guesses, guess]);  
+  function handleSumbmitGuess(guess) {
+    console.log("new guess: ", guess);
+    setGuesses([...guesses, guess]);
   }
 
   return (
     <>
-      <PreviousGuess guesses={guesses}/>
+      <PreviousGuess guesses={guesses} />
       <GuessInput handleSubmitGuess={handleSumbmitGuess} />
     </>
   );

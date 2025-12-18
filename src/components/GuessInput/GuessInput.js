@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({handleSubmitGuess}) {
+function GuessInput({ handleSubmitGuess }) {
   const [tempGuess, setTempGuess] = React.useState("");
 
   function handleSubmit(event) {
@@ -8,7 +8,6 @@ function GuessInput({handleSubmitGuess}) {
     console.log("your guess:", { tempGuess });
     handleSubmitGuess(tempGuess);
     setTempGuess("");
-
   }
   return (
     <form onSubmit={handleSubmit} className="guess-input-wrapper">
